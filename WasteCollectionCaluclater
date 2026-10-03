@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class WasteCollectionCalculator {
+
+    // Method to calculate total waste collected
+    public static double calculateTotalWaste(double point1Waste, double point2Waste) {
+        return point1Waste + point2Waste;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read waste collected at point 1
+        System.out.print("Enter waste collected at Point 1 (in kg): ");
+        double point1Waste = scanner.nextDouble();
+
+        // Read waste collected at point 2
+        System.out.print("Enter waste collected at Point 2 (in kg): ");
+        double point2Waste = scanner.nextDouble();
+
+        // Call the method to calculate total waste
+        double totalWaste = calculateTotalWaste(point1Waste, point2Waste);
+
+        // Display the result
+        System.out.println("Total waste collected: " + totalWaste + " kg");
+
+        scanner.close();
+    }
+}
